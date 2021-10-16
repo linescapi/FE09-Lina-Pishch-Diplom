@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "usename": "123",
+      "password": "123"
+    }
+  ],
+  "tasks": [
+    {
+      "text": "Doctor Appointment",
+      "day": "15 oct.",
+      "checked": false,
+      "id": 1
+    },
+    {
+      "text": "go grocery shopping",
+      "day": "15. oct",
+      "checked": true,
+      "id": 2
+    },
+    {
+      "text": "read a book",
+      "day": "evening",
+      "checked": false,
+      "id": 3
+    },
+    {
+      "text": "to go for a walk",
+      "day": "today",
+      "checked": false,
+      "id": 4
+    }
+  ]
+}

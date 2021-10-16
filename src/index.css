@@ -1,13 +1,330 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  padding: 30px;
+  font-family: 'Raleway', sans-serif;
+  background-image: url("./img/4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  overflow: auto;
+  max-width: 70%;
+  margin: 30px auto;
+  padding: 30px;
+  min-height: 300px;
+  background-color: rgba(255, 255, 255, 0.466);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 15px;
+  /* border: 3px solid rgba(255, 255, 255, 0.90); */
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: inherit;
+  color: rgba(245, 245, 245, 0.90);
+  border: 1px solid rgba(245, 245, 245, 0.90);
+  background-color: black;
+}
+
+.btn:focus {
+  /* color: #ffa200d3; */
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  background: #000;
+  color: rgba(245, 245, 245, 0.90);
+  border: none;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4d5;
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #f4f4f400;
+  border-radius: 25px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.task.checked {
+  border: 1px solid #3d550c4b;
+  background-color: #3d550c94;
+  text-decoration: line-through;
+  color:rgba(0, 0, 0, 0.452);
+}
+
+.task.checked input {
+  display: none;
+}
+
+.task.checked .edit-icon{
+  display: none;
+}
+
+.task-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+}
+
+.task-element input {
+  height: 16px;
+  width: 16px;
+}
+
+.task-inner {
+  margin-left: 15px;
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-icons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.699);
+  background-color: rgba(255, 255, 255, 0);
+  width: 94%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-control input::placeholder {
+  color: rgba(0, 0, 0, 0.50);
+}
+
+.form-control input:hover {
+  background-color:rgba(255, 255, 255, 0.40);
+}
+
+.form-control input:focus {
+  background-color:rgba(255, 255, 255, 0.40);
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+  max-width: 20px;
+}
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-text {
+  color: #fff;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-link-text {
+  color:rgba(0, 0, 0, 0.63);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+}
+
+.about-link-text:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.go-back-link-text {
+  color:rgba(0, 0, 0, 0.63);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.go-back-link-text:hover {
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.no-tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-tasks-text {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.welcome-title::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: black;
+  display: block;
+  margin: 25px auto;
+}
+
+.start-page-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+  padding: 30px;
+}
+
+.main-page-login-btn, .main-page-singup-btn, .login-btn, .sing-up-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  width: 242px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.60);
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #3d550c94;
+  color: rgba(0, 0, 0, 0.60);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.main-page-login-btn:hover, .main-page-singup-btn:hover {
+  color: black;
+  border: 1px solid black;
+  background-color: #3d550cc4;
+}
+
+.login-container, .sing-up-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.login-input, .password-input, .sing-up-input {
+  margin: 5px;
+  padding: 10px 20px;
+  width: 200px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.60);
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  background-color: #3d550c94;
+  color: rgba(0, 0, 0, 0.60);
+  transition: 0.3s ease;
+}
+
+.password-input {
+  margin-bottom: 30px;
+}
+
+.login-input::placeholder, .password-input::placeholder, .sing-up-input::placeholder {
+  color: rgba(0, 0, 0, 0.50);
+}
+
+.login-input:hover, .password-input:hover, .login-input:focus, .password-input:focus, .sing-up-input:hover, .sing-up-input:focus {
+  background-color: #3d550c5d;
+  color: rgba(0, 0, 0, 0.952);
+}
+
+.login-btn, .sing-up-btn {
+  color: rgba(245, 245, 245, 0.90);
+  border: 1px solid black;
+  background-color: black;
+}
+
+.login-btn:focus, .sing-up-btn:focus  {
+  transform: scale(0.95, 0.95);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Raleway', sans-serif;
 }
