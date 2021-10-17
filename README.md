@@ -6,9 +6,9 @@ DONE:
 3. check (finish) task
 4. delete task
 5. route branch from the main page to a task list
+6. firebase login
 
-NOT DONE:
-1. user log in/sing in
-2. edit tasks
+NOT DONE
+1. edit tasks
+2. storage tasks into firebase
 
-NOTE: files aren't organized (I'll fix it).
