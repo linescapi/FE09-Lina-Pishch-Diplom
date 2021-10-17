@@ -32,6 +32,10 @@ body {
   margin-bottom: 30px;
 }
 
+.header-description {
+  margin-top: 5px;
+}
+
 .btn {
   display: inline-block;
   width: 100%;
@@ -257,7 +261,7 @@ footer {
   padding: 30px;
 }
 
-.main-page-login-btn, .main-page-singup-btn, .login-btn, .sing-up-btn {
+.main-page-login-btn, .main-page-signup-btn, .login-btn, .sign-up-btn {
   margin: 10px;
   padding: 10px 20px;
   width: 242px;
@@ -272,13 +276,24 @@ footer {
   transition: 0.3s ease;
 }
 
-.main-page-login-btn:hover, .main-page-singup-btn:hover {
+.switch-login-signup  {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+
+.main-page-login-btn:hover, .main-page-signup-btn:hover {
   color: black;
   border: 1px solid black;
   background-color: #3d550cc4;
 }
 
-.login-container, .sing-up-container {
+.login-container, .sign-up-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,7 +303,7 @@ footer {
   padding: 15px;
 }
 
-.login-input, .password-input, .sing-up-input {
+.login-input, .password-input, .sign-up-input {
   margin: 5px;
   padding: 10px 20px;
   width: 200px;
@@ -302,26 +317,22 @@ footer {
   transition: 0.3s ease;
 }
 
-.password-input {
-  margin-bottom: 30px;
-}
-
-.login-input::placeholder, .password-input::placeholder, .sing-up-input::placeholder {
+.login-input::placeholder, .password-input::placeholder, .sign-up-input::placeholder {
   color: rgba(0, 0, 0, 0.50);
 }
 
-.login-input:hover, .password-input:hover, .login-input:focus, .password-input:focus, .sing-up-input:hover, .sing-up-input:focus {
+.login-input:hover, .password-input:hover, .login-input:focus, .password-input:focus, .sign-up-input:hover, .sign-up-input:focus {
   background-color: #3d550c5d;
   color: rgba(0, 0, 0, 0.952);
 }
 
-.login-btn, .sing-up-btn {
+.login-btn, .sign-up-btn {
   color: rgba(245, 245, 245, 0.90);
   border: 1px solid black;
   background-color: black;
 }
 
-.login-btn:focus, .sing-up-btn:focus  {
+.login-btn:focus, .sign-up-btn:focus  {
   transform: scale(0.95, 0.95);
 }
 

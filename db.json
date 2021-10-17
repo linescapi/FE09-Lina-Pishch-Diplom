@@ -29,6 +29,12 @@
       "day": "today",
       "checked": false,
       "id": 4
+    },
+    {
+      "text": "ToDo",
+      "day": "18. Oct",
+      "checked": false,
+      "id": 5
     }
   ]
 }

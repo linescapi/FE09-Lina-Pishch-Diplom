@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Route } from "react-router";
-import { About } from "./About";
 import { AddTask } from "./AddTask";
 import { Header } from "./Header";
 import { NoTasks } from "./NoTasks";
@@ -108,7 +107,7 @@ export const UserHomePage = () => {
       */}
         {showAddTask && <AddTask onAdd={addTask} />}
         {/* if showAddTask is true show the component AddTask */}
-        <Route path="/about" component={About} />
+        {/* <Route path="/about" component={About} /> */}
         {/* <Footer /> */}
       </div>
       <div
@@ -119,7 +118,7 @@ export const UserHomePage = () => {
         }}
       >
         <Route
-          path="/UserHomePage"
+          path="/"
           render={(props) => (
             <>
               {tasks.length > 0 ? (

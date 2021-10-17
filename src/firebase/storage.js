@@ -11,20 +11,21 @@ import { app } from "./firebase";
 
 const storage = getStorage(app);
 
-export const uploadImage = (file, name, uid) => {
+//uploadImage
+export const addTask = (file, name, uid) => {
   const storageRef = ref(storage, `${uid}/${name}`);
   uploadBytes(storageRef, file).then((snapshot) => {
     console.log("Uploaded a blob or file!");
   });
 };
 
-export const downloadImage = async () => {
+export const downloadTask = async () => {
   const url = await getDownloadURL(ref(storage, `uuid/name`));
   // This can be downloaded directly:
   return url;
 };
 
-export const downloadImages = async (uid) => {
+export const downloadTasks = async (uid) => {
   const listRef = ref(storage, uid);
 
   try {

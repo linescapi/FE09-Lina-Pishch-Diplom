@@ -3,14 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./userHomePage.css";
 import reportWebVitals from "./reportWebVitals";
-import { MainPage } from "./components/MainPage";
-import { BrowserRouter as Router } from "react-router-dom";
+import { App } from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <MainPage />
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

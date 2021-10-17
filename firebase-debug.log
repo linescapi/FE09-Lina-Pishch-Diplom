@@ -1,0 +1,155 @@
+[debug] [2021-10-16T17:56:36.241Z] ----------------------------------------------------------------------
+[debug] [2021-10-16T17:56:36.244Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\49170\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-10-16T17:56:36.245Z] CLI Version:   9.20.0
+[debug] [2021-10-16T17:56:36.245Z] Platform:      win32
+[debug] [2021-10-16T17:56:36.245Z] Node Version:  v14.17.0
+[debug] [2021-10-16T17:56:36.246Z] Time:          Sat Oct 16 2021 19:56:36 GMT+0200 (Central European Summer Time)
+[debug] [2021-10-16T17:56:36.246Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-16T17:56:36.249Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-10-16T17:56:36.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-16T17:56:36.285Z] > authorizing via signed-in user (linescapi@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\49170\Desktop\TeachMeSkills\диплом\task-app
+
+[debug] [2021-10-16T17:56:36.798Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-10-16T17:56:36.798Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-10-16T17:57:05.826Z] > refreshing access token with scopes: []
+[debug] [2021-10-16T17:57:05.826Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-16T17:57:05.953Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sat, 16 Oct 2021 17:57:09 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:05.970Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-10-16T17:57:06.391Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-10-16T17:57:06.391Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project task-app-by-lina-pisc (Task App Authentication LP) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2021-10-16T17:57:10.353Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-10-16T17:57:10.353Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-10-16T17:57:10.462Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 16 Oct 2021 17:57:14 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:10.475Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/task-app-by-lina-pisc/services/firebasedatabase.googleapis.com  
+ 
+[debug] [2021-10-16T17:57:11.355Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2021-10-16T17:57:11.358Z] >>> HTTP REQUEST GET https://firebasedatabase.googleapis.com/v1beta/projects/task-app-by-lina-pisc/locations/-/instances/task-app-by-lina-pisc-default-rtdb  
+ 
+[debug] [2021-10-16T17:57:11.699Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[info] Skipping overwrite of Realtime Database Security Rules.
+[info] The security rules defined in database.rules.json will be published when you run firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2021-10-16T17:57:28.540Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/task-app-by-lina-pisc/services/firestore.googleapis.com  
+ 
+[debug] [2021-10-16T17:57:29.415Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:29.416Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/task-app-by-lina-pisc  
+ 
+[debug] [2021-10-16T17:57:29.771Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:29.772Z] database_type: CLOUD_FIRESTORE
+[debug] [2021-10-16T17:57:29.773Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-16T17:57:29.773Z] > authorizing via signed-in user (linescapi@gmail.com)
+[debug] [2021-10-16T17:57:29.773Z] [iam] checking project task-app-by-lina-pisc for permissions ["firebase.projects.get"]
+[debug] [2021-10-16T17:57:29.774Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-app-by-lina-pisc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-10-16T17:57:30.471Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:34 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=593","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-10-16T17:57:36.064Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/task-app-by-lina-pisc/releases?pageSize=10&pageToken=  
+ 
+[debug] [2021-10-16T17:57:36.802Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:36.803Z] Found ruleset: projects/task-app-by-lina-pisc/rulesets/ce1cd57f-a85b-44ec-8156-6f28ca95e684
+[debug] [2021-10-16T17:57:36.803Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/task-app-by-lina-pisc/rulesets/ce1cd57f-a85b-44ec-8156-6f28ca95e684  
+ 
+[debug] [2021-10-16T17:57:37.507Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:41 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2021-10-16T17:57:42.059Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/task-app-by-lina-pisc/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2021-10-16T17:57:42.060Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1/projects/task-app-by-lina-pisc/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2021-10-16T17:57:42.891Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:42.898Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:46 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with sample code
+[info] pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2021-10-16T17:57:42.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-10-16T17:57:42.906Z] > authorizing via signed-in user (linescapi@gmail.com)
+[debug] [2021-10-16T17:57:42.906Z] [iam] checking project task-app-by-lina-pisc for permissions ["firebase.projects.get"]
+[debug] [2021-10-16T17:57:42.907Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/task-app-by-lina-pisc:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-10-16T17:57:43.574Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:47 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=595","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:43.575Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/task-app-by-lina-pisc/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2021-10-16T17:57:43.576Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/task-app-by-lina-pisc/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2021-10-16T17:57:44.372Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-10-16T17:57:44.822Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 16 Oct 2021 17:57:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-10-16T17:58:45.559Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-10-16T17:58:45.661Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-10-16T17:58:45.661Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.1.3","browserURL":"https://www.gstatic.com/firebasejs/9.1.3/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.1.3/firebase.tgz"},"live":{"version":"9.1","browserURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.1/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.1.3/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.1.3/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.1.3/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.1.3/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.1.3/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.1.3/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.1.3/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.1.3/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.1.3/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.memory.js"}}
+[info] i  Skipping write of public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\49170\Desktop\TeachMeSkills\диплом\task-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=973573077&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-16T17:59:05.206Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"e51165b4f873bb42119b","redirect_uri":"http://localhost:9005","state":"973573077"}
+[debug] [2021-10-16T17:59:05.425Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Sat, 16 Oct 2021 17:59:09 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, X-PJAX-Container, Accept-Encoding, Accept, X-Requested-With","permissions-policy":"interest-cohort=()","etag":"W/\"cda8df5c9e6693b53b4ba3808f204724\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; child-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com objects-origin.githubusercontent.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events translator.github.com wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src render.githubusercontent.com viewscreen.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/","x-github-request-id":"F343:EC8C:11842D0:125B845:616B12EC"}
+[debug] [2021-10-16T17:59:05.431Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-10-16T17:59:05.678Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-10-16T17:59:05.678Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"linescapi","id":79752350,"node_id":"MDQ6VXNlcjc5NzUyMzUw","avatar_url":"https://avatars.githubusercontent.com/u/79752350?v=4","gravatar_id":"","url":"https://api.github.com/users/linescapi","html_url":"https://github.com/linescapi","followers_url":"https://api.github.com/users/linescapi/followers","following_url":"https://api.github.com/users/linescapi/following{/other_user}","gists_url":"https://api.github.com/users/linescapi/gists{/gist_id}","starred_url":"https://api.github.com/users/linescapi/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/linescapi/subscriptions","organizations_url":"https://api.github.com/users/linescapi/orgs","repos_url":"https://api.github.com/users/linescapi/repos","events_url":"https://api.github.com/users/linescapi/events{/privacy}","received_events_url":"https://api.github.com/users/linescapi/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":7,"public_gists":0,"followers":0,"following":2,"created_at":"2021-02-27T13:06:32Z","updated_at":"2021-08-31T17:33:07Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":19076,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as linescapi 
+[info] 
+[debug] [2021-10-16T18:00:34.278Z] >>> [apiv2][query] GET https://api.github.com/repos/linescapi/actions/secrets/public-key type=owner
+[debug] [2021-10-16T18:00:34.281Z] >>> [apiv2][query] GET https://api.github.com/repos///actions/secrets/public-key type=owner
+[debug] [2021-10-16T18:00:34.467Z] <<< [apiv2][status] GET https://api.github.com/repos///actions/secrets/public-key 404
+[debug] [2021-10-16T18:00:34.468Z] <<< [apiv2][body] GET https://api.github.com/repos///actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[debug] [2021-10-16T18:00:34.469Z] <<< [apiv2][status] GET https://api.github.com/repos/linescapi/actions/secrets/public-key 404
+[debug] [2021-10-16T18:00:34.469Z] <<< [apiv2][body] GET https://api.github.com/repos/linescapi/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}

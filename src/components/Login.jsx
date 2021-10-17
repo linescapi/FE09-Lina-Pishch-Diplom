@@ -1,55 +1,25 @@
-import { Link } from "react-router-dom";
-import { Button } from "./Button";
-import { useState } from "react";
+// import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
+import { signIn } from "../firebase/auth";
+import { AuthForm } from "./AuthForm";
 
-export const Login = ({ sumbitBtnHandler }) => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleInputLogin = (e) => {
-    setLogin(e.traget.value);
+export const Login = () => {
+  const handleSubmit = (login, password) => {
+    signIn(login, password);
   };
 
-  const handleInputPassword = (e) => {
-    setPassword(e.traget.value);
-  };
+  const history = useHistory();
 
-  const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // sumbitBtnHandler(login, password);
+  const routeToSignUp = () => {
+    history.push("/signUp");
   };
 
   return (
-    <div className="container" style={{ textAlign: "center" }}>
-      <h3
-        className="welcome-title"
-        style={{
-          margin: "15px 0",
-          fontSize: "27px",
-        }}
-      >
-        Login
-      </h3>
-      <p style={{ marginTop: "15px", fontWeight: "500" }}>
-        Enter your username and password downbelow.
-      </p>
-      <div className="login-container">
-        <input
-          className="login-input"
-          type="text"
-          placeholder="Username"
-          onChange={handleInputLogin}
-        />
-        <input
-          className="password-input"
-          type="password"
-          placeholder="Password"
-          onChange={handleInputPassword}
-        />
-        <Link to="/UserHomePage">
-          <Button className="login-btn" text="Login" onClick={handleSubmit} />
-        </Link>
-      </div>
-    </div>
+    <AuthForm
+      buttonName="Log In"
+      text="I Want To Create An Account"
+      submitBtnHandler={handleSubmit}
+      routeBtnHandler={routeToSignUp}
+    />
   );
 };
