@@ -1,5 +1,4 @@
 import { signOut } from "../../firebase/auth";
-import { Button } from "../../components/Button";
 
 export const Main = () => {
   return (

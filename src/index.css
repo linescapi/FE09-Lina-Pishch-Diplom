@@ -36,6 +36,39 @@ body {
   margin-top: 5px;
 }
 
+.title-and-sign-out-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-out-button {
+  margin: 10px;
+  padding: 10px 20px;
+  width: 100px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.60);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.40);
+  color: rgba(0, 0, 0, 0.60);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sign-out-button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+} 
+
+.sign-out-button:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black;
+  transform: scale(0.97, 0.97);
+}
+
 .btn {
   display: inline-block;
   width: 100%;

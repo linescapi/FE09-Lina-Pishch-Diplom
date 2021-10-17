@@ -1,4 +1,5 @@
 import { useLocation } from "react-router";
+import { signOut } from "../firebase/auth";
 import { Button } from "./Button";
 
 export const Header = ({ title, onAdd, showAdd, addTask, about }) => {
@@ -7,9 +8,14 @@ export const Header = ({ title, onAdd, showAdd, addTask, about }) => {
   return (
     <header className="header">
       {location.pathname === "/" && (
-        <h1 style={{ marginTop: "15px", textAlign: "left" }}>
-          {showAdd ? addTask : title}
-        </h1>
+        <div className="title-and-sign-out-button">
+          <h1 style={{ marginTop: "15px", textAlign: "left" }}>
+            {showAdd ? addTask : title}
+          </h1>
+          <button className="sign-out-button" onClick={signOut}>
+            Sign Out
+          </button>
+        </div>
       )}
       <p className="header-description">
         You can add a taks downbelow.
