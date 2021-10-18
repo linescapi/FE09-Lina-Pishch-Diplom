@@ -1,4 +1,3 @@
-IN PROGRESS 
 
 DONE:
 1. get tasks
