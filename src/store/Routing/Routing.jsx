@@ -3,9 +3,8 @@ import { Redirect, Route, Switch, useHistory } from "react-router";
 import { Login } from "../../components/Login";
 import { UserHomePage } from "../../components/UserHomePage";
 import { SignUp } from "../../components/SignUp";
+import { MainPage } from "../../components/MainPage";
 import { useUser } from "../userContext";
-import { Main } from "./Main";
-
 export const Routing = () => {
   const user = useUser();
 
@@ -18,13 +17,16 @@ export const Routing = () => {
 
   return (
     <Switch>
+      <Route path="/home">
+        <MainPage />
+      </Route>
       <Route path="/login">
         <Login />
       </Route>
       <Route path="/signUp">
         <SignUp />
       </Route>
-      {!user && <Redirect to="/login" />}
+      {!user && <Redirect to="/home" />}
       <Route>
         <UserHomePage />
       </Route>

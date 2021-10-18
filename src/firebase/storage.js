@@ -2,6 +2,7 @@ import {
   getStorage,
   ref,
   uploadBytes,
+  uploadString,
   getDownloadURL,
   listAll,
   getMetadata,
@@ -14,8 +15,12 @@ const storage = getStorage(app);
 //uploadImage
 export const addTask = (file, name, uid) => {
   const storageRef = ref(storage, `${uid}/${name}`);
-  uploadBytes(storageRef, file).then((snapshot) => {
-    console.log("Uploaded a blob or file!");
+  // uploadBytes(storageRef, file).then((snapshot) => {
+  //   console.log("Uploaded a blob or file!");
+  // });
+  const message = "Test";
+  uploadString(storageRef, message).then((snapshot) => {
+    console.log("Uploaded a raw string!");
   });
 };
 

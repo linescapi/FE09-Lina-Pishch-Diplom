@@ -60,9 +60,6 @@ export const AuthForm = ({
           onChange={handleInputPassword}
           required
         />
-        {/* <Link to="/UserHomePage">
-      <Button className="login-btn" text="Login" onClick={handleSubmit} />
-    </Link> */}
         <SubmitButton className="login-btn" text={buttonName} />
         <Button
           className="switch-login-signup"

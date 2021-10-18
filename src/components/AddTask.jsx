@@ -6,7 +6,7 @@ export const AddTask = ({ onAdd }) => {
   const [checked, setChecked] = useState(false);
 
   const onSubmit = (e) => {
-    e.preventDefault(); //preventDefault is for that it doean't actually submit to a page
+    e.preventDefault();
 
     if (!text) {
       alert("Please add a task");
@@ -17,7 +17,6 @@ export const AddTask = ({ onAdd }) => {
 
     onAdd({ text, day, checked });
 
-    //for clearing the form
     setText("");
     setDay("");
     setChecked(false);

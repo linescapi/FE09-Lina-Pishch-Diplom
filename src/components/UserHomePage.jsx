@@ -49,26 +49,12 @@ export const UserHomePage = () => {
     const data = await res.json();
 
     setTasks([...tasks, data]);
-
-    //const id = Math.floor(Math.random() * 10000) + 1;
-    // const newTask = { id, ...task };
-    // setTasks([...tasks, newTask]);
-  };
-
-  //Delete Task
-  const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
-      method: "DELETE",
-    });
-
-    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   //Check Task
   const checkTask = async (id) => {
     const taskToCheck = await fetchTask(id);
     const finishTask = { ...taskToCheck, checked: !taskToCheck.checked };
-    //changing the reminder: "reminder: !taskToToggle.reminder
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: "PUT",
@@ -87,6 +73,18 @@ export const UserHomePage = () => {
     );
   };
 
+  //Edit Task
+  const EditTask = async (id) => {};
+
+  //Delete Task
+  const deleteTask = async (id) => {
+    await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "DELETE",
+    });
+
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <section className="user-home-page">
       <div className="user-home-page-container" style={{ width: "22%" }}>
@@ -94,21 +92,8 @@ export const UserHomePage = () => {
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
         />
-        {/* it's changing use state's value on a different one */}
-        {/*
-      the moment with showing NO TASKS;
-      the Task component got wrapped into
-      the rule:
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteask} />
-      ) : (
-        "No Task To Show"
-      )}
-      */}
         {showAddTask && <AddTask onAdd={addTask} />}
         {/* if showAddTask is true show the component AddTask */}
-        {/* <Route path="/about" component={About} /> */}
-        {/* <Footer /> */}
       </div>
       <div
         className="user-home-page-container"

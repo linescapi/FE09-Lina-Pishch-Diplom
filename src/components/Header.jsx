@@ -9,17 +9,14 @@ export const Header = ({ title, onAdd, showAdd, addTask, about }) => {
     <header className="header">
       {location.pathname === "/" && (
         <div className="title-and-sign-out-button">
-          <h1 style={{ marginTop: "15px", textAlign: "left" }}>
-            {showAdd ? addTask : title}
-          </h1>
+          <h1 style={{ textAlign: "left" }}>{showAdd ? addTask : title}</h1>
           <button className="sign-out-button" onClick={signOut}>
             Sign Out
           </button>
         </div>
       )}
       <p className="header-description">
-        You can add a taks downbelow.
-        <br /> Just click the button.
+        {showAdd ? "" : "You can add a taks downbelow. Just click the button."}
       </p>
       {location.pathname === "/" && (
         <Button
