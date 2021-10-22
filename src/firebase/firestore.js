@@ -15,3 +15,26 @@ export const readData = async (uid) => {
     console.log(error);
   }
 };
+
+// //getAllTodos
+// export const getTasks = (request, response) => {
+//   db.collection("tasks")
+//     .orderBy("text", "id")
+//     .get()
+//     .then((data) => {
+//       let tasks = [];
+//       data.forEach((doc) => {
+//         tasks.push({
+//           taskId: doc.id,
+//           text: doc.data().text,
+//           day: doc.data().day,
+//           checked: doc.data().checked,
+//         });
+//       });
+//       return response.json(tasks);
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//       return response.status(500).json({ error: err.code });
+//     });
+// };

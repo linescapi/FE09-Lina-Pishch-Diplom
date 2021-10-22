@@ -123,7 +123,6 @@ body {
   border: 1px solid #f4f4f400;
   border-radius: 25px;
   text-transform: capitalize;
-  cursor: pointer;
 }
 
 .task.checked {
@@ -371,6 +370,38 @@ footer {
 
 .login-btn:focus, .sign-up-btn:focus  {
   transform: scale(0.95, 0.95);
+}
+
+/* edit task inputs */
+.edit-task-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  margin-left: 15px;
+}
+
+.edit-task-input-text, .edit-task-input-day {
+  width: auto;
+  color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  border-bottom: 1px solid #000000;
+  text-transform: capitalize;
+}
+
+.edit-task-input-text {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.edit-task-input-day {
+  font-size: 16px;
+  margin-top: 5px;
+  font-family: inherit;
 }
 
 code {

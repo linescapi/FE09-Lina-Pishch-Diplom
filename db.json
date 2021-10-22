@@ -7,10 +7,10 @@
   ],
   "tasks": [
     {
-      "text": "Doctor Appointment",
-      "day": "15 oct.",
+      "day": "15 Oct.",
       "checked": false,
-      "id": 1
+      "id": 1,
+      "text": "Doctor Appointment"
     },
     {
       "text": "go grocery shopping",
@@ -19,16 +19,28 @@
       "id": 2
     },
     {
-      "text": "read a book",
-      "day": "evening",
-      "checked": false,
-      "id": 3
-    },
-    {
-      "text": "to go for a walk",
-      "day": "today",
+      "text": "To Go For A Walk",
+      "day": "Today",
       "checked": false,
       "id": 4
+    },
+    {
+      "text": "dfg",
+      "day": "13. oct",
+      "checked": false,
+      "id": 5
+    },
+    {
+      "text": "read a book",
+      "day": "1",
+      "checked": false,
+      "id": 6
+    },
+    {
+      "text": "123",
+      "day": "123",
+      "checked": true,
+      "id": 7
     }
   ]
 }

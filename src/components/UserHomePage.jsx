@@ -9,6 +9,9 @@ export const UserHomePage = () => {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
 
+  const [textEdit, setTextEdit] = useState("");
+  const [dayEdit, setDayEdit] = useState("");
+
   useEffect(() => {
     const getTasks = async () => {
       const tasksFromServer = await fetchTasks();
@@ -74,7 +77,33 @@ export const UserHomePage = () => {
   };
 
   //Edit Task
-  const EditTask = async (id) => {};
+  const editTask = async (id) => {
+    const taskToEdit = await fetchTask(id);
+    const submitEditTask = {
+      ...taskToEdit,
+      text: (taskToEdit.text = textEdit),
+      day: (taskToEdit.day = dayEdit),
+    };
+
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(submitEditTask),
+    });
+
+    const data = await res.json();
+
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, text: data.text, day: data.day } : task
+      )
+    );
+
+    setTextEdit("");
+    setDayEdit("");
+  };
 
   //Delete Task
   const deleteTask = async (id) => {
@@ -111,6 +140,11 @@ export const UserHomePage = () => {
                   tasks={tasks}
                   onDelete={deleteTask}
                   onChecked={checkTask}
+                  onEdit={editTask}
+                  editTextValue={textEdit}
+                  editDayValue={dayEdit}
+                  setTextEdit={(e) => setTextEdit(e.target.value)}
+                  setDayEdit={(e) => setDayEdit(e.target.value)}
                 />
               ) : (
                 <NoTasks />
