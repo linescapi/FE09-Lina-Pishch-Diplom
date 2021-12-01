@@ -5,8 +5,8 @@ DONE:
 3. check (finish) task
 4. delete task
 6. firebase login
+7. edit tasks
 
 NOT DONE
-1. edit tasks
-2. storage tasks into firebase
+1. storage tasks into firebase
 
